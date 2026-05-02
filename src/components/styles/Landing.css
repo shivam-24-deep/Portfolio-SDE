@@ -253,53 +253,83 @@ h2.landing-info-h2 {
   left: 0;
 }
 @media screen and (max-width: 499px) {
+  .landing-section {
+    height: auto !important;
+    min-height: 100svh;
+    display: flex;
+    flex-direction: column;
+    padding: 100px 20px 40px 20px !important;
+    box-sizing: border-box;
+    overflow: visible;
+  }
+  .landing-container {
+    height: auto !important;
+    width: 100% !important;
+    position: relative !important;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
   .landing-intro {
-    top: 15%;
+    position: relative !important;
+    top: 0 !important;
+    left: 0 !important;
     width: 100%;
     text-align: center;
-    left: 0;
-  }
-  .landing-intro h1 {
-    font-size: 42px;
-    line-height: 1.1;
   }
   .landing-intro h2 {
-    font-size: 14px;
-    letter-spacing: 2px;
+    font-size: 11px !important;
+    letter-spacing: 2px !important;
+    margin-bottom: 5px !important;
+  }
+  .landing-intro h1 {
+    font-size: 32px !important;
+    line-height: 1.1 !important;
   }
   .landing-info {
-    bottom: 80px;
+    position: relative !important;
+    bottom: 0 !important;
+    right: 0 !important;
+    left: 0 !important;
     width: 100%;
     text-align: center;
-    transform: translateX(0);
-    right: 0;
+    transform: none !important;
+    margin-top: 20px;
+  }
+  .landing-info h3 {
+    font-size: 14px !important;
+    margin-bottom: 5px !important;
   }
   .landing-info h2 {
-    font-size: 24px;
-    margin-left: 0;
-    justify-content: center;
+    font-size: 18px !important;
+    height: 30px !important;
+    justify-content: center !important;
+    margin-left: 0 !important;
+    margin-top: 5px !important;
   }
   h2.landing-info-h2 {
-    font-size: 28px;
-    width: 100%;
-    margin-left: 0;
+    font-size: 22px !important;
+    height: 35px !important;
+    margin-bottom: 5px !important;
+  }
+  .character-model {
+    height: 35vh !important;
+    position: relative !important;
+    bottom: 0 !important;
+    margin: 20px 0 !important;
+    pointer-events: none;
+  }
+  .character-model::after, .character-model::before {
+    display: none !important;
   }
 }
 @media screen and (min-width: 500px) and (max-width: 1024px) {
-  .landing-intro {
-    top: 15%;
-    width: 100%;
-    text-align: center;
+  .landing-section {
+    padding-top: 120px;
+    height: auto;
   }
   .landing-intro h1 {
-    font-size: 60px;
-  }
-  .landing-info {
-    bottom: 60px;
-    width: 100%;
-    text-align: center;
-    transform: translateX(0);
-    right: 0;
+    font-size: 50px;
   }
 }
 @media screen and (min-width: 768px) {

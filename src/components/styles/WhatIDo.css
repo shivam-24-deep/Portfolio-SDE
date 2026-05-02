@@ -315,54 +315,57 @@
 }
 @media only screen and (max-width: 900px) {
   .whatIDO {
-    flex-direction: column;
-    height: auto;
-    padding: 80px 0;
+    flex-direction: column !important;
+    height: auto !important;
+    padding: 80px 20px !important;
   }
   .what-box h2 {
-    margin: 30px 0;
-    font-size: 42px;
-    line-height: 1.1;
-    text-align: center;
+    margin: 30px 0 !important;
+    font-size: 32px !important;
+    line-height: 1.2 !important;
+    text-align: center !important;
+    margin-right: 0 !important;
   }
   .what-box {
-    width: 100%;
-    max-width: 90%;
-    margin: auto;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: auto !important;
     justify-content: center !important;
   }
   .what-box-in {
-    display: flex;
-    flex-direction: column;
-    margin-left: 0px;
-    height: auto;
-    width: 100%;
-    gap: 20px;
+    display: flex !important;
+    flex-direction: column !important;
+    margin-left: 0px !important;
+    height: auto !important;
+    width: 100% !important;
+    gap: 20px !important;
   }
   .what-content {
-    width: 100%;
-    height: auto;
-    min-height: auto;
-    padding: 30px;
+    width: 100% !important;
+    height: auto !important;
+    min-height: auto !important;
+    padding: 25px !important;
     opacity: 1 !important;
+    position: relative !important;
   }
   .what-noTouch:hover,
   .what-content-active {
-    min-height: auto;
-    padding: 30px;
+    min-height: auto !important;
+    padding: 25px !important;
   }
   .what-content h3 {
-    font-size: 22px;
-    margin-bottom: 10px;
+    font-size: 20px !important;
+    margin-bottom: 8px !important;
   }
   .what-content p {
-    font-size: 13px;
-    line-height: 1.5;
-    opacity: 0.8;
+    font-size: 13px !important;
+    line-height: 1.4 !important;
+    opacity: 0.9 !important;
   }
   .what-content-flex {
     opacity: 1 !important;
-    margin-top: 15px;
+    margin-top: 10px !important;
+    display: flex !important;
   }
 }
 @media only screen and (max-width: 550px) {
