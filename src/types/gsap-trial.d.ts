@@ -1,0 +1,13 @@
+declare module 'gsap-trial/ScrollSmoother' {
+  export const ScrollSmoother: any;
+  export default ScrollSmoother;
+}
+
+declare module 'gsap-trial/SplitText' {
+  export const SplitText: any;
+  export default SplitText;
+}
+
+declare module 'gsap-trial/all' {
+  export * from 'gsap-trial';
+}
