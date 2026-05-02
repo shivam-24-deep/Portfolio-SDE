@@ -252,54 +252,29 @@ h2.landing-info-h2 {
   top: 0;
   left: 0;
 }
-@media screen and (max-width: 499px) {
-  .landing-intro {
-    top: 15%;
-    width: 100%;
-    text-align: center;
-    left: 0;
+@media screen and (min-width: 500px) {
+  .landing-circle2 {
+    display: block;
   }
-  .landing-intro h1 {
-    font-size: 42px;
-    line-height: 1.1;
+  .character-model {
+    z-index: 0;
+  }
+  .landing-info h3 {
+    font-size: 18px;
   }
   .landing-intro h2 {
-    font-size: 14px;
-    letter-spacing: 2px;
-  }
-  .landing-info {
-    bottom: 80px;
-    width: 100%;
-    text-align: center;
-    transform: translateX(0);
-    right: 0;
-  }
-  .landing-info h2 {
-    font-size: 24px;
-    margin-left: 0;
-    justify-content: center;
-  }
-  h2.landing-info-h2 {
-    font-size: 28px;
-    width: 100%;
-    margin-left: 0;
-  }
-}
-@media screen and (min-width: 500px) and (max-width: 1024px) {
-  .landing-intro {
-    top: 15%;
-    width: 100%;
-    text-align: center;
+    font-size: 18px;
   }
   .landing-intro h1 {
-    font-size: 60px;
+    font-size: 30px;
+    line-height: 30px;
   }
-  .landing-info {
-    bottom: 60px;
-    width: 100%;
-    text-align: center;
-    transform: translateX(0);
-    right: 0;
+  .landing-info h2 {
+    font-size: 35px;
+    line-height: 40px;
+  }
+  h2.landing-info-h2 {
+    font-size: 38px;
   }
 }
 @media screen and (min-width: 768px) {

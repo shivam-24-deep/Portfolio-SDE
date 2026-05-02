@@ -161,36 +161,7 @@
 }
 
 @media only screen and (max-width: 768px) {
-  .certifications-section {
-    padding: 80px 0;
-  }
-  .section-title {
-    font-size: 45px;
-    margin-bottom: 40px;
-  }
-  .bento-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-  .bento-card {
-    padding: 25px;
-    min-height: auto;
-  }
-  .cert-sub-card {
-    padding: 15px;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 15px;
-  }
-  .cert-link {
-    margin-left: 0;
-    margin-top: 10px;
-  }
-  .cert-item-title {
-    font-size: 16px !important;
-  }
-  .bento-card h3 {
-    font-size: 20px;
-    margin-bottom: 25px;
-  }
+  .section-title { font-size: 40px; }
+  .bento-card { padding: 25px; }
+  .cert-info-main p { font-size: 16px; }
 }
