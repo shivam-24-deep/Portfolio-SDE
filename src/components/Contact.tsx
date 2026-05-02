@@ -1,68 +1,68 @@
 import { MdArrowOutward, MdCopyright } from "react-icons/md";
 import "./styles/Contact.css";
+import { portfolioData } from "../data/portfolioData";
 
 const Contact = () => {
   return (
     <div className="contact-section section-container" id="contact">
       <div className="contact-container">
-        <h3>Contact</h3>
-        <div className="contact-flex">
-          <div className="contact-box">
-            <h4>Email</h4>
-            <p>
-              <a href="mailto:example@mail.com" data-cursor="disable">
-                example@mail.com
-              </a>
-            </p>
-            <h4>Phone</h4>
-            <p>
-              <a href="tel:+9199999999" data-cursor="disable">
-                +91 99999 99999
-              </a>
-            </p>
+        <h2 className="section-title">CONTACT</h2>
+        
+        <div className="contact-grid">
+          <div className="contact-left">
+            <div className="contact-info-block">
+              <h4>Connect</h4>
+              <p>
+                <a href={portfolioData.contact.linkedin} target="_blank" rel="noreferrer">
+                  LinkedIn — {portfolioData.contact.linkedin.split('/').pop()}
+                </a>
+              </p>
+            </div>
+            
+            <div className="contact-info-block">
+              <h4>Education</h4>
+              <p>
+                {portfolioData.education[0].degree}, {portfolioData.education[0].school} — {portfolioData.education[0].date}
+              </p>
+            </div>
           </div>
-          <div className="contact-box">
+
+          <div className="contact-center">
             <h4>Social</h4>
-            <a
-              href="https://github.com"
-              target="_blank"
-              data-cursor="disable"
-              className="contact-social"
-            >
-              Github <MdArrowOutward />
-            </a>
-            <a
-              href="https://www.linkedin.com"
-              target="_blank"
-              data-cursor="disable"
-              className="contact-social"
-            >
-              Linkedin <MdArrowOutward />
-            </a>
-            <a
-              href="https://x.com"
-              target="_blank"
-              data-cursor="disable"
-              className="contact-social"
-            >
-              Twitter <MdArrowOutward />
-            </a>
-            <a
-              href="https://www.instagram.com"
-              target="_blank"
-              data-cursor="disable"
-              className="contact-social"
-            >
-              Instagram <MdArrowOutward />
-            </a>
+            <ul className="social-links">
+              <li>
+                <a href={portfolioData.contact.github} target="_blank" rel="noreferrer">
+                  GitHub <MdArrowOutward />
+                </a>
+              </li>
+              <li>
+                <a href={portfolioData.contact.linkedin} target="_blank" rel="noreferrer">
+                  LinkedIn <MdArrowOutward />
+                </a>
+              </li>
+              <li>
+                <a href={`mailto:${portfolioData.contact.email}`}>
+                  Email <MdArrowOutward />
+                </a>
+              </li>
+              {portfolioData.contact.leetcode && (
+                <li>
+                  <a href={portfolioData.contact.leetcode} target="_blank" rel="noreferrer">
+                    LeetCode <MdArrowOutward />
+                  </a>
+                </li>
+              )}
+            </ul>
           </div>
-          <div className="contact-box">
-            <h2>
-              Designed and Developed <br /> by <span>Moncy Yohannan</span>
-            </h2>
-            <h5>
-              <MdCopyright /> 2024
-            </h5>
+
+          <div className="contact-right">
+            <div className="developed-by">
+              <p>Designed and Developed by</p>
+              <h3>{portfolioData.name}</h3>
+            </div>
+            <div className="copyright">
+              <MdCopyright /> 2026
+            </div>
           </div>
         </div>
       </div>

@@ -1,4 +1,5 @@
 import "./styles/Career.css";
+import { portfolioData } from "../data/portfolioData";
 
 const Career = () => {
   return (
@@ -12,48 +13,34 @@ const Career = () => {
           <div className="career-timeline">
             <div className="career-dot"></div>
           </div>
-          <div className="career-info-box">
-            <div className="career-info-in">
-              <div className="career-role">
-                <h4>Position In Company</h4>
-                <h5>Company Name</h5>
+          {portfolioData.experience.map((exp, index) => (
+            <div className="career-info-box" key={index}>
+              <div className="career-info-in">
+                <div className="career-role">
+                  <h4>{exp.role}</h4>
+                  <h5>{exp.company}</h5>
+                </div>
+                <h3>{exp.date}</h3>
               </div>
-              <h3>20XX</h3>
+              <p>{exp.description}</p>
             </div>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
-              labore sit non ipsum temporibus quidem, deserunt eaque officiis
-              mollitia ratione suscipit repellat.
-            </p>
-          </div>
-          <div className="career-info-box">
-            <div className="career-info-in">
-              <div className="career-role">
-                <h4>Position In Company</h4>
-                <h5>Company Name</h5>
+          ))}
+          
+          <h2 style={{ marginTop: '60px' }}>
+            My <span>Education</span>
+          </h2>
+          {portfolioData.education.map((edu, index) => (
+            <div className="career-info-box" key={index}>
+              <div className="career-info-in">
+                <div className="career-role">
+                  <h4>{edu.degree}</h4>
+                  <h5>{edu.school}</h5>
+                </div>
+                <h3>{edu.date}</h3>
               </div>
-              <h3>20XX</h3>
+              <p>{edu.performance}</p>
             </div>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
-              labore sit non ipsum temporibus quidem, deserunt eaque officiis
-              mollitia ratione suscipit repellat.
-            </p>
-          </div>
-          <div className="career-info-box">
-            <div className="career-info-in">
-              <div className="career-role">
-                <h4>Position In Company</h4>
-                <h5>Company Name</h5>
-              </div>
-              <h3>NOW</h3>
-            </div>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
-              labore sit non ipsum temporibus quidem, deserunt eaque officiis
-              mollitia ratione suscipit repellat.
-            </p>
-          </div>
+          ))}
         </div>
       </div>
     </div>

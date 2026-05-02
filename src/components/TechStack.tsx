@@ -1,4 +1,7 @@
 import * as THREE from "three";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 import { useRef, useMemo, useState, useEffect } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Environment } from "@react-three/drei";
@@ -13,14 +16,13 @@ import {
 
 const textureLoader = new THREE.TextureLoader();
 const imageUrls = [
-  "/images/react2.webp",
-  "/images/next2.webp",
-  "/images/node2.webp",
-  "/images/express.webp",
-  "/images/mongo.webp",
+  "/images/python.png",
+  "/images/tensorflow.png",
+  "/images/scikit.png",
   "/images/mysql.webp",
-  "/images/typescript.webp",
   "/images/javascript.webp",
+  "/images/react2.webp",
+  "/images/typescript.webp",
 ];
 const textures = imageUrls.map((url) => textureLoader.load(url));
 
@@ -128,27 +130,15 @@ const TechStack = () => {
   const [isActive, setIsActive] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      const scrollY = window.scrollY || document.documentElement.scrollTop;
-      const threshold = document
-        .getElementById("work")!
-        .getBoundingClientRect().top;
-      setIsActive(scrollY > threshold);
-    };
-    document.querySelectorAll(".header a").forEach((elem) => {
-      const element = elem as HTMLAnchorElement;
-      element.addEventListener("click", () => {
-        const interval = setInterval(() => {
-          handleScroll();
-        }, 10);
-        setTimeout(() => {
-          clearInterval(interval);
-        }, 1000);
-      });
+    const trigger = ScrollTrigger.create({
+      trigger: ".techstack",
+      start: "top center",
+      onEnter: () => setIsActive(true),
+      onLeaveBack: () => setIsActive(false),
     });
-    window.addEventListener("scroll", handleScroll);
+
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      trigger.kill();
     };
   }, []);
   const materials = useMemo(() => {
