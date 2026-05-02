@@ -8,7 +8,7 @@ import "./styles/Navbar.css";
 import { portfolioData } from "../data/portfolioData";
 
 gsap.registerPlugin(ScrollSmoother, ScrollTrigger);
-export let smoother: ScrollSmoother;
+export let smoother: any;
 
 const Navbar = () => {
   useEffect(() => {
